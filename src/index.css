@@ -1,16 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply bg-brand-50 text-slate-800 font-body overflow-x-hidden;
-    margin: 0;
-    padding: 0;
-  }
-}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Hide scrollbar for Lenis smooth scrolling */
 html.lenis, html.lenis body {
@@ -81,4 +73,16 @@ html.lenis, html.lenis body {
     70% { transform: translate(0,15%) }
     80% { transform: translate(3%,35%) }
     90% { transform: translate(-10%,10%) }
+}
+
+/* Custom Scrollbar (Hidden) */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
 }
